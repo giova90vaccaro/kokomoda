@@ -1,0 +1,90 @@
+<div class="start">
+  <div class="contenuto">
+    <mat-card mat-button class="int">Incasso
+      <mat-card-content>
+        <table>
+          <tr>
+            <th>Incasso</th>
+
+            <th>Categoria</th>
+          </tr>
+          <tr>
+            <th style="font-size: xx-large;">{{today23[0].Totale}}  €</th>
+
+            <th style="font-size: xx-large;">{{today23[0].Categoria}}</th>
+          </tr>
+          <tr>
+            <td>Scontrini: {{today23[0].Scontrini}}</td>
+
+            <td>Valore: {{today23[0].Valore}}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="contenuto">
+    <mat-card mat-button class="int">Ultimi 7 Giorni
+      <mat-card-content *ngIf="show2">
+        <google-chart
+      [title]="title2"
+      [type]="type2"
+      [data]="data3"
+      [columns]="columns"
+      [options]="options"
+      [width]="chartWidth"
+      [height]="chartHeight2">
+    </google-chart>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="start">
+  <mat-card mat-button class="int2">
+    <mat-card-title>
+      Categoria
+    </mat-card-title>
+    <mat-card-subtitle>
+      Classifica Vendita Categoria
+    </mat-card-subtitle>
+    <mat-card-content *ngIf="show" >
+      <!--
+<table>
+       <tr>
+         <th>Categoria</th>
+         <th>Q.ta</th>
+         <th>Valore</th>
+       </tr>
+      <tr *ngFor="let x of categoria" >
+        <td>
+          {{x.Categoria}}
+        </td>
+        <td>
+          {{x.quantita}}
+        </td>
+        <td>
+          {{x.Valore}}
+        </td>
+      </tr>
+     </table>
+      --><google-chart
+      [title]="title"
+      [type]="type"
+      [data]="data1"
+      [width]="chartWidth"
+      [height]="chartHeight"
+      [dynamicResize]="true">
+    </google-chart>
+
+    </mat-card-content>
+
+  </mat-card>
+
+
+</div>
+<div class="start">
+  <mat-card mat-button class="int2">Articolo</mat-card>
+</div>
+<div class="start">
+  <mat-card mat-button class="int2">Storico</mat-card>
+</div>

@@ -1,0 +1,50 @@
+@media screen and (min-width: 751px){
+  .example-container {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .example-sidenav-content {
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnint{
+    width: 15vw;
+  }
+  .example-sidenav{
+  width: 15vw;
+  }
+  img{
+    width: 5vw;
+    margin-top: 1vh;
+    margin-left: 5vw;
+  }
+}
+@media screen and (max-width: 751px){
+  .example-container {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .example-sidenav-content {
+    height: 3vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnint{
+    width: 60vw;
+  }
+  .example-sidenav{
+  width: 60vw;
+  }
+  img{
+    width: 40vw;
+    margin-top: 1vh;
+    margin-left: 10vw;
+  }
+}

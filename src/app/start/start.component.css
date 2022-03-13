@@ -1,0 +1,65 @@
+@media screen and (min-width: 751px){
+  .start{
+      height: 45vh;
+      width: 45vw;
+      float: left;
+      margin-left: 2.5vw;
+      margin-bottom: 2.5vh;
+  }
+  .contenuto{
+    height: 22.4vh;
+      width: 45vw;
+
+  }
+  mat-card.int{
+    height: 15vh;
+  }
+  mat-card.int2{
+    height: 40vh;
+  }
+
+  table.tre{
+    height: 30vh;
+    width: 42.5vw;
+  }
+  table{
+    height: 10.5vh;
+    width: 42.5vw;
+  }
+  th,td{
+    text-align: center;
+  }
+  mat-card-content{
+    margin-top: 2.5vh;
+  }
+}
+@media screen and (max-width: 751px){
+  .start{
+    height: 50vh;
+    width: 95vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    }
+    .contenuto{
+      height: 25vh;
+      width: 95vw;
+
+    }
+    mat-card.int{
+      height: 20vh;
+    }
+    mat-card.int2{
+      height: 45vh;
+    }
+    table.tre{
+      height: 30vh;
+      width: 42.5vw;
+    }
+    table{
+      height: 10.5vh;
+      width: 90vw;
+    }
+    th,td{
+      text-align: center;
+    }
+}
