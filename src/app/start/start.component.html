@@ -108,5 +108,22 @@
   <mat-card mat-button class="int2">Articolo Top 5</mat-card>
 </div>
 <div class="start">
-  <mat-card mat-button class="int2">Mese</mat-card>
+  <mat-card mat-button class="int2">
+    <mat-card-title>
+      Mese
+    </mat-card-title>
+    <mat-card-subtitle>
+      Incassi Ultimi 6 Mesi
+    </mat-card-subtitle>
+    <mat-card-content *ngIf="show3">
+      <google-chart
+      [title]="title3"
+      [type]="type3"
+      [data]="data4"
+      [width]="chartWidth"
+      [height]="chartHeight"
+      [dynamicResize]="true">
+    </google-chart>
+    </mat-card-content>
+  </mat-card>
 </div>

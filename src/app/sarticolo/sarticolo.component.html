@@ -1,0 +1,40 @@
+<mat-card class="test" >
+  <mat-card-title>
+    Ricerca Articolo
+  </mat-card-title>
+  <mat-card-subtitle>Ricerca Angrafica e Andamento</mat-card-subtitle>
+  <mat-card-content>
+      <mat-form-field class="sarticolo">
+        <mat-label>Codice Articolo</mat-label>
+        <input matInput #articolo ><button matSuffix mat-icon-button (click)="searchItems(articolo.value)"><mat-icon>search
+        </mat-icon></button>
+      </mat-form-field>
+  </mat-card-content>
+  </mat-card>
+  <mat-card class="corpo" *ngIf="corpo">
+  <mat-card-content>
+    <table>
+      <tr>
+        <td>
+          Codice<br><br>
+          <a>35g34g34g</a>
+        </td>
+        <td>
+          Barcode<br><br>
+          <a>35g34g34g</a>
+        </td>
+        <td>
+          Descrizione<br><br>
+          <a>35g34g34g</a>
+        </td>
+        <td>
+          Prezzo<br><br>
+          <a>35g34g34g</a>
+        </td>
+        </tr>
+      
+    </table>
+   
+  </mat-card-content>
+
+</mat-card>

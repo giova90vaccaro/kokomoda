@@ -20,6 +20,7 @@ export class StartComponent implements OnInit {
   categoria!:any;
   lastseven!:any;
   today23!:any;
+  mese11!:any;
 
   title!:any;
   type!:any;
@@ -32,21 +33,32 @@ export class StartComponent implements OnInit {
   type2!:any;
   data3!:any;
 
+  title3!:any;
+  type3!:any;
+  data4!:any;
+
   righe2!:any;
   righealt2!:any;
+  righe3!:any;
+  righealt3!:any;
   options!:any;
+  options3!:any;
 
   col:string[]=['Giorno','Incasso'];
   columns!:any;
+
+  col3:string[]=['Giorno','Incasso'];
+  columns3!:any;
   bar!:any;
   show=false;
   show2=false;
+  show3=false;
 
   chartHeight = 0
   chartHeight2 = 0;
   chartWidth = 0
 
-  constructor(private api:HttpClient,private api2:HttpClient) {
+  constructor(private api:HttpClient,private api2:HttpClient, private mese:HttpClient) {
     this.api.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/index.php").subscribe(
       data=>{
 
@@ -97,6 +109,35 @@ export class StartComponent implements OnInit {
     this.api2.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/today.php").subscribe(
       data=>{
         this.today23 = data;
+      }
+    )
+
+    this.mese.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/month.php").subscribe(
+        data =>{
+          console.log(data);
+
+        this.mese11 = data
+        this.righe3=[];
+      this.righealt3 = [];
+      var i:number
+        for(i=0; i<this.mese11.length; i++){
+          var aux = [this.mese11[i].mese, Number(this.mese11[i].Totale) ]
+          var y = [this.mese11[i].mese, Number(this.mese11[i].NScontrini)]
+          this.righe3.push(aux)
+          this.righealt3.push(y)
+        }
+        this.title3= 'Fascia Oraria'
+        this.type3= ChartType.Bar
+        this.columns3 = this.col3
+
+        this.data4 = this.righe3
+        this.options3={
+          chart: {
+            title: "Andamento FasciaOraria da",
+            subtitle: 'Totale Scontrinato - Numero di Pezzi'
+          }
+        }
+        this.show3 = true;
       }
     )
 
