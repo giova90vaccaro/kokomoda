@@ -9,9 +9,9 @@
             <th>Categoria</th>
           </tr>
           <tr>
-            <th style="font-size: xx-large;">{{today23[0].Totale}}  €</th>
+            <th class="scritta">{{today23[0].Totale}}  €</th>
 
-            <th style="font-size: xx-large;">{{today23[0].Categoria}}</th>
+            <th class="scritta">{{today23[0].Categoria}}</th>
           </tr>
           <tr>
             <td>Scontrini: {{today23[0].Scontrini}}</td>
@@ -23,7 +23,7 @@
     </mat-card>
   </div>
   <div class="contenuto">
-    <mat-card mat-button class="int">Ultimi 7 Giorni
+    <mat-card class="int3">Ultimi 7 Giorni <button mat-button style="margin-left: 28vw;" (click)="show2=!show2"><mat-icon>bar_chart</mat-icon></button>
       <mat-card-content *ngIf="show2">
         <google-chart
       [title]="title2"
@@ -34,7 +34,28 @@
       [width]="chartWidth"
       [height]="chartHeight2">
     </google-chart>
-
+      </mat-card-content>
+      <mat-card-content *ngIf="!show2">
+        <table>
+          <tr>
+            <td style="text-align: left;">{{lastseven[0].Data}}</td>
+            <td style="text-align: left;">{{lastseven[1].Data}}</td>
+            <td style="text-align: left;">{{lastseven[2].Data}}</td>
+            <td style="text-align: left;">{{lastseven[3].Data}}</td>
+            <td style="text-align: left;">{{lastseven[4].Data}}</td>
+            <td style="text-align: left;">{{lastseven[5].Data}}</td>
+            <td style="text-align: left;">{{lastseven[6].Data}}</td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">{{lastseven[0].Totale}}</td>
+            <td style="text-align: left;">{{lastseven[1].Totale}}</td>
+            <td style="text-align: left;">{{lastseven[2].Totale}}</td>
+            <td style="text-align: left;">{{lastseven[3].Totale}}</td>
+            <td style="text-align: left;">{{lastseven[4].Totale}}</td>
+            <td style="text-align: left;">{{lastseven[5].Totale}}</td>
+            <td style="text-align: left;">{{lastseven[6].Totale}}</td>
+          </tr>
+        </table>
       </mat-card-content>
     </mat-card>
   </div>
@@ -42,31 +63,14 @@
 <div class="start">
   <mat-card mat-button class="int2">
     <mat-card-title>
-      Categoria
+      Categoria <button mat-button style="margin-left: 28vw;" (click)="show=!show"><mat-icon>bar_chart</mat-icon></button>
     </mat-card-title>
     <mat-card-subtitle>
       Classifica Vendita Categoria
     </mat-card-subtitle>
     <mat-card-content *ngIf="show" >
       <!--
-<table>
-       <tr>
-         <th>Categoria</th>
-         <th>Q.ta</th>
-         <th>Valore</th>
-       </tr>
-      <tr *ngFor="let x of categoria" >
-        <td>
-          {{x.Categoria}}
-        </td>
-        <td>
-          {{x.quantita}}
-        </td>
-        <td>
-          {{x.Valore}}
-        </td>
-      </tr>
-     </table>
+
       --><google-chart
       [title]="title"
       [type]="type"
@@ -75,16 +79,34 @@
       [height]="chartHeight"
       [dynamicResize]="true">
     </google-chart>
-
     </mat-card-content>
-
+    <mat-card-content *ngIf="!show">
+      <table>
+        <tr>
+          <th>Categoria</th>
+          <th>Q.ta</th>
+          <th>Valore</th>
+        </tr>
+       <tr *ngFor="let x of categoria" >
+         <td>
+           {{x.Categoria}}
+         </td>
+         <td>
+           {{x.quantita}}
+         </td>
+         <td>
+           {{x.Valore}}
+         </td>
+       </tr>
+      </table>
+    </mat-card-content>
   </mat-card>
 
 
 </div>
 <div class="start">
-  <mat-card mat-button class="int2">Articolo</mat-card>
+  <mat-card mat-button class="int2">Articolo Top 5</mat-card>
 </div>
 <div class="start">
-  <mat-card mat-button class="int2">Storico</mat-card>
+  <mat-card mat-button class="int2">Mese</mat-card>
 </div>

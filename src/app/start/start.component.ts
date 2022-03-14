@@ -69,7 +69,7 @@ export class StartComponent implements OnInit {
 
     this.api.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/lastseven.php").subscribe(
       data=>{
-        //console.log(data);
+        console.log(data);
 
         this.righe2=[];
         this.righealt2 = [];
@@ -96,9 +96,7 @@ export class StartComponent implements OnInit {
 
     this.api2.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/today.php").subscribe(
       data=>{
-        console.log(data);
         this.today23 = data;
-        console.log(this.today23);
       }
     )
 
