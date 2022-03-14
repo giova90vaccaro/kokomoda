@@ -21,6 +21,7 @@ export class StartComponent implements OnInit {
   lastseven!:any;
   today23!:any;
   mese11!:any;
+  articoli!:any;
 
   title!:any;
   type!:any;
@@ -44,6 +45,7 @@ export class StartComponent implements OnInit {
   options!:any;
   options3!:any;
 
+  inttabella:string[]=['cat','nome','qta','valore'];
   col:string[]=['Giorno','Incasso'];
   columns!:any;
 
@@ -58,7 +60,7 @@ export class StartComponent implements OnInit {
   chartHeight2 = 0;
   chartWidth = 0
 
-  constructor(private api:HttpClient,private api2:HttpClient, private mese:HttpClient) {
+  constructor(private api:HttpClient,private api2:HttpClient, private mese:HttpClient, private art:HttpClient) {
     this.api.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/index.php").subscribe(
       data=>{
 
@@ -114,8 +116,6 @@ export class StartComponent implements OnInit {
 
     this.mese.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/month.php").subscribe(
         data =>{
-          console.log(data);
-
         this.mese11 = data
         this.righe3=[];
       this.righealt3 = [];
@@ -138,6 +138,12 @@ export class StartComponent implements OnInit {
           }
         }
         this.show3 = true;
+      }
+    )
+    this.art.get("https://cvggold-dash.ns0.it/desktestgh/KokoModa/desk/andamento/articoli.php").subscribe(
+      data=>{
+        console.log(data)
+        this.articoli = data;
       }
     )
 

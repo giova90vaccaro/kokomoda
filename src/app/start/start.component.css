@@ -36,7 +36,7 @@
     width: 42.5vw;
   }
   th,td{
-    text-align: center;
+    text-align: left;
   }
   mat-card-content{
     margin-top: 2.5vh;
@@ -76,7 +76,7 @@
       width: 90vw;
     }
     th,td{
-      text-align: center;
+      text-align: left;
     }
     .scritta{
       font-size: x-large;
