@@ -18,10 +18,15 @@ mat-card.corpo{
   margin-left: 2.5vw;
   margin-right: 2.5vw;
 }
+mat-card.corpo2{
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  margin-top: 2.5vh;
+}
 table{
   width: 80vw;
   margin-left: 5vw;
-  border: 1px solid green;
+
 }
 td{
   text-align: center;

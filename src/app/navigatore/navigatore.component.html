@@ -6,9 +6,9 @@
       <img src="https://centrolecupole.com/wp-content/uploads/2021/02/ABBIGLIAMENTO_CUPOLE4-1.png">
         <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/Home" routerLinkActive="active">Home</a>
         <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/Sritemss" routerLinkActive="active">Ricerca Articoli</a>
-        <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/Vendite" routerLinkActive="active"> Vendite Articolo</a>
-        <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/Categoria" routerLinkActive="active">Vendite Categoria</a>
-        <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/Stock" routerLinkActive="active">Magazzino</a>
+        <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/RicercaVendite" routerLinkActive="active"> Vendite Articolo</a>
+        <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/VenditeCategoria" routerLinkActive="active">Vendite Categoria</a>
+        <a class="btnint" mat-button (click)="drawer.toggle()" [disabled]="true" routerLink="/Stock" routerLinkActive="active">Magazzino</a>
 
         <a class="btnint" mat-button (click)="drawer.toggle()" routerLink="/History" routerLinkActive="active">Incasso - Andamento</a>
 

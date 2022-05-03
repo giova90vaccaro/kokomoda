@@ -150,7 +150,7 @@ export class StartComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
+/*
     if(window.innerWidth>750){
       this.chartWidth=window.innerWidth * 0.43
       this.chartHeight= window.innerHeight * 0.3
@@ -162,7 +162,7 @@ export class StartComponent implements OnInit {
       this.chartHeight= window.innerHeight * 0.4
       this.chartHeight2= window.innerHeight * 0.2
 
-    }
+    }*/
 
   }
 

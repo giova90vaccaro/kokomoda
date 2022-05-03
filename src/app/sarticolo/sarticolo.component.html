@@ -14,27 +14,57 @@
   <mat-card class="corpo" *ngIf="corpo">
   <mat-card-content>
     <table>
-      <tr>
+      <tr >
         <td>
           Codice<br><br>
-          <a>35g34g34g</a>
+          <a>{{art[0].Categoria}}</a>
         </td>
         <td>
           Barcode<br><br>
-          <a>35g34g34g</a>
+          <a>{{art[0].Barcode}}</a>
         </td>
         <td>
           Descrizione<br><br>
-          <a>35g34g34g</a>
+          <a>{{art[0].Descrizione}}</a>
         </td>
         <td>
           Prezzo<br><br>
-          <a>35g34g34g</a>
+          <a>{{art[0].Prezzo}}</a>
         </td>
         </tr>
-      
+
     </table>
-   
+
   </mat-card-content>
+
+
+</mat-card>
+<mat-card class="corpo2" *ngIf="corpo2">
+  <mat-card-content>
+    <table>
+      <tr>
+        <td>
+          TipoDocumento
+        </td>
+        <td>
+          Qta
+        </td>
+        <td>
+          Totale
+        </td>
+        <td>
+          Sconti
+        </td>
+        </tr>
+        <tr *ngFor="let aux of valori" >
+          <td>{{aux.selettore}}</td>
+          <td>{{aux.Qta}}</td>
+          <td>{{aux.Totale}} €</td>
+          <td>{{aux.Sconto}}</td>
+        </tr>
+    </table>
+
+  </mat-card-content>
+
 
 </mat-card>

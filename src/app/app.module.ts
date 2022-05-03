@@ -18,6 +18,12 @@ import { MatCardModule } from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { SrvenditeComponent } from './srvendite/srvendite.component';
+import { SrcategoriaComponent } from './srcategoria/srcategoria.component';
 
 
 @NgModule({
@@ -25,7 +31,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppComponent,
     NavigatoreComponent,
     StartComponent,
-    SarticoloComponent
+    SarticoloComponent,
+    SrvenditeComponent,
+    SrcategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +47,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatTableModule,
     GoogleChartsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
