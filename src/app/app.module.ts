@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { SrvenditeComponent } from './srvendite/srvendite.component';
 import { SrcategoriaComponent } from './srcategoria/srcategoria.component';
+import { IncassiComponent } from './incassi/incassi.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SrcategoriaComponent } from './srcategoria/srcategoria.component';
     StartComponent,
     SarticoloComponent,
     SrvenditeComponent,
-    SrcategoriaComponent
+    SrcategoriaComponent,
+    IncassiComponent
   ],
   imports: [
     BrowserModule,
