@@ -56,11 +56,9 @@
     table, tr, td{
       margin-left: 5vw;
       width: 80vw;
-      border: 1px solid green;
+
     }
-    td{
-      display: table-row;
-    }
+
     a{
       font-size: x-large;
       width: 80vw;
