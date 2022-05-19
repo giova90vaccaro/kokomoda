@@ -16,7 +16,7 @@ export class SrcategoriaComponent implements OnInit {
 
   show = false;
   dataSource!:any
-  displayedColumns = ['Categoria', 'Qta', 'Perc','prezzo', 'Valore'];
+  displayedColumns = ['Categoria', 'CatDesc','Qta', 'Perc','prezzo', 'Valore'];
 
   constructor(private api:HttpClient) { }
 
